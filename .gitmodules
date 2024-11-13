@@ -1,0 +1,3 @@
+[submodule "conception_lms"]
+	path = conception_lms
+	url = https://github.com/erc271/conception_lms.git

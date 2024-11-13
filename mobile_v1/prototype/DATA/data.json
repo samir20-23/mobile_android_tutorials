@@ -1,0 +1,72 @@
+[
+    {
+        "ISBN": "978-3-16-148410-0",
+        "title": "Learning PHP",
+        "author": "John Doe",
+        "publication_date": "2023-09-20",
+        "availability": true
+    },
+    {
+        "ISBN": "0---89879878-",
+        "title": "sdfsdf",
+        "author": "sdfsdf",
+        "publication_date": "sdf",
+        "availability": true
+    },
+    {
+        "ISBN": "asd",
+        "title": "sdfs",
+        "author": "sdf",
+        "publication_date": "sdf",
+        "availability": true
+    },
+    {
+        "ISBN": "ttttt",
+        "title": "t",
+        "author": "t",
+        "publication_date": "t",
+        "availability": true
+    },
+    {
+        "ISBN": "fa",
+        "title": "fafa",
+        "author": "fafafa",
+        "publication_date": "fafafafafa",
+        "availability": true
+    },
+    {
+        "ISBN": "as",
+        "title": "as",
+        "author": "as",
+        "publication_date": "a",
+        "availability": true
+    },
+    {
+        "ISBN": "00",
+        "title": "as",
+        "author": "as",
+        "publication_date": "as",
+        "availability": true
+    },
+    {
+        "ISBN": "oooooooooooooooooo",
+        "title": "dddddddddddd",
+        "author": "ddddddddd",
+        "publication_date": "dddddddd",
+        "availability": true
+    },
+    {
+        "ISBN": "121212",
+        "title": "samir",
+        "author": "samir",
+        "publication_date": "samir",
+        "availability": true
+    },
+    {
+        "ISBN": "498573945",
+        "title": "samir",
+        "author": "dsamit",
+        "publication_date": "948579345",
+        "availability": true
+    }
+]
