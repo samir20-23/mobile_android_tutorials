@@ -1,5 +1,4 @@
-package com.example.mobile_project_v9
-
+package com.example.tuto1
 
 class Cookie(
     val name: String,
