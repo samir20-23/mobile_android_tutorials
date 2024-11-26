@@ -1,4 +1,6 @@
 package com.example.mobile_project_v9
+
+// test a create a tuto 7.1
 fun main() {
 
     // *** Arrays ***
@@ -18,6 +20,8 @@ fun main() {
     println("Number of rock planets: ${rockPlanetsList.size}")
     println("Second planet in the list: ${rockPlanetsList[1]}")
     println("Index of Earth: ${rockPlanetsList.indexOf("Earth")}")
+
+    // Iterate through the list of rock planets
     for (planet in rockPlanetsList) {
         println("Rock Planet: $planet")
     }
