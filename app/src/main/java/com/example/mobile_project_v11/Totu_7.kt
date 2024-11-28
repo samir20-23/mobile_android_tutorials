@@ -17,18 +17,17 @@ fun main(){
     println(carrés)
     nombres.forEach{println(it)}
 }
-                                       // Create a generic function: 
+                                       //Create a generic function:
+
 fun <T> afficherElement(element: T) {
     println(element)
 }
-
-
 fun main() {
 afficherElement(42)        
 afficherElement("Bonjour") 
 }
 
-                                       // Create a generic function:
+                                       // Generic class:
 class Boîte<T>(val contenu: T) {
     fun afficherContenu() {
         println("Contenu : $contenu")
