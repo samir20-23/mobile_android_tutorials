@@ -1,3 +1,4 @@
+package com.example.mobile_project_v11
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
