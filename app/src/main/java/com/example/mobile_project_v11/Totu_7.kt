@@ -10,7 +10,7 @@ fun main(){
 }
                                        // Filter and transform data:
 val nombres = listOf(1, 2, 3, 4, 5)
-val pairs = nombres.filter { it % 2 == 0 } 
+val pairs = nombres.filter{ it % 2 == 0 } 
 val carrés = nombres.map { it * it }       
 fun main(){
     println(pairs)
