@@ -10,25 +10,24 @@ fun main(){
 }
                                        // Filter and transform data:
 val nombres = listOf(1, 2, 3, 4, 5)
-val pairs = nombres.filter { it % 2 == 0 } 
+val pairs = nombres.filter{ it % 2 == 0 } 
 val carrés = nombres.map { it * it }       
 fun main(){
     println(pairs)
     println(carrés)
     nombres.forEach{println(it)}
 }
-                                       // Create a generic function: 
+                                       //Create a generic function:
+
 fun <T> afficherElement(element: T) {
     println(element)
 }
-
-
 fun main() {
 afficherElement(42)        
 afficherElement("Bonjour") 
 }
 
-                                       // Create a generic function:
+                                       // Generic class:
 class Boîte<T>(val contenu: T) {
     fun afficherContenu() {
         println("Contenu : $contenu")
