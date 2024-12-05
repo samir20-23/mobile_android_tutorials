@@ -23,8 +23,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.livecoding_1.ui.theme.Livecoding_1Theme
 
@@ -45,17 +45,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CarteDeVisite(modifier: Modifier) {
+fun CarteDeVisite(modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Nom et profession
+        // Name and profession
         Text(
-            text = "John Doe",
+            text = "Samir",
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier.padding(bottom = 8.dp)
         )
@@ -66,31 +66,37 @@ fun CarteDeVisite(modifier: Modifier) {
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Coordonnées
+        // Contact details
         val context = LocalContext.current
-        val callIntent = Intent(Intent.ACTION_DIAL).apply {
-            data = Uri.parse("04058474")
-        }
         ContactInfo(
             label = "Téléphone :",
-            value = "+33 6 12 34 56 78",
-            onClick = { context.startActivity(callIntent) }
+            value = "+212 7 18 08 71 06",
+            onClick = {
+                val callIntent = Intent(Intent.ACTION_DIAL).apply {
+                    data = Uri.parse("tel:+212718087106")
+                }
+                context.startActivity(callIntent)
+            }
         )
-        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("04058474")
-        }
         ContactInfo(
             label = "Email :",
-            value = "johndoe@example.com",
-            onClick = { context.startActivity(emailIntent) }
+            value = "aouladamarsamir@gmail.com",
+            onClick = {
+                val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+                    data = Uri.parse("mailto:aouladamarsamir@gmail.com")
+                }
+                context.startActivity(emailIntent)
+            }
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Bouton pour site web
-        val siteIntent = Intent(Intent.ACTION_VIEW).apply {
-            data = Uri.parse("www.google.com")
-        }
-        Button(onClick = { context.startActivity(siteIntent) }) {
+        // Button to visit website
+        Button(onClick = {
+            val siteIntent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse("https://www.github.com/samir20-23")
+            }
+            context.startActivity(siteIntent)
+        }) {
             Text("Visiter mon site")
         }
     }
@@ -105,5 +111,13 @@ fun ContactInfo(label: String, value: String, onClick: () -> Unit) {
     ) {
         Text(text = "$label ", fontWeight = FontWeight.Bold)
         Text(text = value, color = Color.Blue)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun CarteDeVisitePreview() {
+    Livecoding_1Theme {
+        CarteDeVisite(modifier = Modifier)
     }
 }
